@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Student Manager{% endblock %}
+
+{% block header %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-grid">
+    <div class="stat-card">
+        <div class="stat-icon primary">
+            <i class="ri-team-fill"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Total Students</h3>
+            <p id="total-students">Loading...</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon success">
+            <i class="ri-book-open-fill"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Majors Count</h3>
+            <p id="total-majors">Loading...</p>
+        </div>
+    </div>
+    <!-- Add more stats if needed -->
+</div>
+
+<div class="dashboard-section">
+    <h2>Recent Students</h2>
+    <div class="table-container">
+        <table id="recent-students-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody id="recent-students-list">
+                <!-- Populated by JS -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.PAGE_ID = 'dashboard';
+</script>
+{% endblock %}

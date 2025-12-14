@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - Student Manager{% endblock %}
+
+{% block header %}Settings{% endblock %}
+
+{% block content %}
+<div class="settings-container">
+    <div class="setting-card">
+        <h3>Appearance</h3>
+        <p>Customize the look and feel of the application.</p>
+
+        <div class="setting-item">
+            <div class="setting-label">
+                <i class="ri-moon-line"></i>
+                <span>Dark Mode</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="setting-card danger-zone">
+        <h3>Danger Zone</h3>
+        <p>Irreversible actions. Tread carefully.</p>
+
+        <div class="setting-item">
+            <div class="setting-label">
+                <i class="ri-delete-bin-2-line"></i>
+                <span>Clear All Data</span>
+            </div>
+            <button class="btn btn-danger" onclick="alert('This feature is disabled for safety.')">Delete
+                Database</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.PAGE_ID = 'settings';
+</script>
+{% endblock %}
